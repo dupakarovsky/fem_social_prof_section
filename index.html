@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" color-scheme="light">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Frontend Mentor | Social proof section</title>
+   </head>
+   <body>
+      <!-- Top background image  -->
+      <picture class="bg__top" aria-hidden="true">
+         <source media="(max-width: 375px)" srcset="./images/bg-pattern-top-mobile.svg" />
+         <source media="(min-width: 376px)" srcset="./images/bg-pattern-top-desktop.svg" />
+         <img src="./images/bg-pattern-top-mobile.svg" alt="background pattern" />
+      </picture>
+      <div class="wrapper">
+         <!-- Intro  -->
+         <div class="intro">
+            <h1 class="intro__title">10,000+ of our <br />users love our <br />products.</h1>
+            <p class="intro__text">
+               We only provide great products combined with excellent customer service. See what our satisfied customers
+               are saying about our services.
+            </p>
+         </div>
+         <!-- Ratings  -->
+         <div class="ratings">
+            <!-- Rating Box 1 -->
+            <div class="rating__box">
+               <div class="rating__icons" aria-hidden="true">
+                  <svg class="rating__icon"><use href="/images/icon-star.svg#icon-star"></use></svg>
+                  <svg class="rating__icon"><use href="/images/icon-star.svg#icon-star"></use></svg>
+                  <svg class="rating__icon"><use href="/images/icon-star.svg#icon-star"></use></svg>
+                  <svg class="rating__icon"><use href="/images/icon-star.svg#icon-star"></use></svg>
+                  <svg class="rating__icon"><use href="/images/icon-star.svg#icon-star"></use></svg>
+               </div>
+               <h2 class="rating__rater">Rated 5 Stars in Reviews</h2>
+            </div>
+            <!-- Rating Box 2 -->
+            <div class="rating__box">
+               <div class="rating__icons" aria-hidden="true">
+                  <svg class="rating__icon"><use href="/images/icon-star.svg#icon-star"></use></svg>
+                  <svg class="rating__icon"><use href="/images/icon-star.svg#icon-star"></use></svg>
+                  <svg class="rating__icon"><use href="/images/icon-star.svg#icon-star"></use></svg>
+                  <svg class="rating__icon"><use href="/images/icon-star.svg#icon-star"></use></svg>
+                  <svg class="rating__icon"><use href="/images/icon-star.svg#icon-star"></use></svg>
+               </div>
+               <h2 class="rating__rater">Rated 5 Stars in Report Guru</h2>
+            </div>
+            <!-- Rating Box 3 -->
+            <div class="rating__box">
+               <div class="rating__icons" aria-hidden="true">
+                  <svg class="rating__icon"><use href="/images/icon-star.svg#icon-star"></use></svg>
+                  <svg class="rating__icon"><use href="/images/icon-star.svg#icon-star"></use></svg>
+                  <svg class="rating__icon"><use href="/images/icon-star.svg#icon-star"></use></svg>
+                  <svg class="rating__icon"><use href="/images/icon-star.svg#icon-star"></use></svg>
+                  <svg class="rating__icon"><use href="/images/icon-star.svg#icon-star"></use></svg>
+               </div>
+               <h2 class="rating__rater">Rated 5 Stars in BestTech</h2>
+            </div>
+         </div>
+         <!-- Reviews  -->
+         <div class="reviews">
+            <!-- Review 1 -->
+            <figure class="review col" style="--idx: 0">
+               <div class="row">
+                  <img class="review__img" src="./images/image-colton.jpg" alt="Image of Colton Smith" />
+                  <div>
+                     <p class="review__name">Colton Smith</p>
+                     <figcaption class="review__verified">Verified Buyer</figcaption>
+                  </div>
+               </div>
+               <blockquote class="review__quote">
+                  "We needed the same printed design as the one we had ordered a week prior. Not only did they find the
+                  original order, but we also received it in time. Excellent!"
+               </blockquote>
+            </figure>
+            <!-- Review 2 -->
+            <figure class="review col" style="--idx: 1">
+               <div class="row">
+                  <img class="review__img" src="./images/image-irene.jpg" alt="Image of Irene Roberts" />
+                  <div>
+                     <p class="review__name">Irene Roberts</p>
+                     <figcaption class="review__verified">Verified Buyer</figcaption>
+                  </div>
+               </div>
+               <blockquote class="review__quote">
+                  "Customer service is always excellent and very quick turn around. Completely delighted with the
+                  simplicity of the purchase and the speed of delivery."
+               </blockquote>
+            </figure>
+            <!-- Review 3 -->
+            <figure class="review col" style="--idx: 2">
+               <div class="row">
+                  <img class="review__img" src="./images/image-anne.jpg" alt="Image of Anne Wallacce" />
+                  <div>
+                     <p class="review__name">Anne Wallace</p>
+                     <figcaption class="review__verified">Verified Buyer</figcaption>
+                  </div>
+               </div>
+               <blockquote class="review__quote">
+                  "Put an order with this company and can only praise them for the very high standard. Will definitely
+                  use them again and recommend them to everyone!"
+               </blockquote>
+            </figure>
+         </div>
+      </div>
+      <!-- Bottom background image  -->
+      <picture class="bg__bottom" aria-hidden="true">
+         <source media="(max-width: 375px)" srcset="./images/bg-pattern-bottom-mobile.svg" sizes="" />
+         <source media="(min-width: 376px)" srcset="./images/bg-pattern-bottom-desktop.svg" sizes="" />
+         <img src="./images/bg-pattern-bottom-desktop.svg" alt="" />
+      </picture>
+      <!-- Atrribution -->
+      <div class="attribution">
+         Challenge by
+         <a href="https://www.frontendmentor.io/challenges/social-proof-section-6e0qTv_bA" target="_blank"
+            >Frontend Mentor</a
+         >. Coded by <a href="https://github.com/dupakarovsky">Dupakarovksy</a>.
+      </div>
+   </body>
+</html>

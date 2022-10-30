@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+/*
+/////////////////
+// GENERAL RESET 
+*/
+:where(*, *::before, *::after) {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+:where(html) {
+   font-size: 62.5%;
+}
+:where(html, body) {
+   min-height: 100vh;
+   scroll-behavior: smooth;
+}
+:where(body) {
+   font-size: 1.6rem;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+   line-height: 1.5;
+}
+:where(img, picture, svg) {
+   display: block;
+}
+:where(ul[role="list"], ol[role="list"]) {
+   list-style-type: none;
+}
+:where(input, button, textarea, select) {
+   font-family: inherit;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+   html:focus-within {
+      scroll-behavior: auto;
+   }
+   *,
+   *::before,
+   *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+   }
+}
+
+/*
+  /////////////////////
+  // CUSTOM PROPERTIES  
+ */
+:root {
+   /* Colors */
+   --very-dark-magenta: hsl(300, 43%, 22%);
+   --soft-pink: hsl(333, 80%, 67%);
+
+   --dark-grayish-magenta: hsl(303, 10%, 53%);
+   --light-grayish-Magenta: hsl(300, 24%, 96%);
+   --white: hsl(0, 0%, 100%);
+
+   /* Font Family */
+   --ff-primary: "League Spartan";
+
+   /* Font Weights */
+   --regular: 400;
+   --medium: 500;
+   --bold: 700;
+
+   /* Dimensions */
+   --max-content-inline: 111rem;
+   --radius: 1rem;
+   --spacer: 3rem;
+
+   --line-height-0: 0.8;
+   --line-height-1: 1;
+   --line-height-2: 1.2;
+   --line-height-3: 1.4;
+}
+
+/*
+///////////////////
+// LAYOUT
+*/
+body {
+   display: grid;
+   place-items: center;
+   /**/
+   font-family: var(--ff-primary);
+   font-size: 1.5rem;
+   color: var(--very-dark-magenta);
+   background-color: var(--white);
+   padding-inline: 2.5rem;
+   padding-block: 7rem;
+   position: relative;
+}
+img {
+   max-inline-size: 100%;
+}
+
+svg {
+   display: inline-block;
+   width: 1.7rem;
+   height: 1.7rem;
+}
+p {
+   font-size: 2rem;
+   color: var(--dark-grayish-magenta);
+}
+
+.wrapper {
+   max-inline-size: var(--max-content-inline);
+   margin: 0 auto;
+}
+.bg__top {
+   position: absolute;
+   /* border: 1px dashed red; */
+   top: 0;
+   left: 0;
+   z-index: -1;
+}
+.bg__bottom {
+   position: absolute;
+   /* border: 1px dashed red; */
+   bottom: 0;
+   right: 0;
+   z-index: -1;
+}
+/*
+///////////////////
+// INTRO
+*/
+.intro {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   text-align: center;
+}
+.intro__title {
+   display: flex;
+   flex-direction: column;
+
+   font-size: clamp(3.6rem, 10vw, 5.6rem);
+   font-weight: var(--bold);
+   letter-spacing: -1px;
+   line-height: var(--line-height-0);
+   margin-block-end: var(--spacer);
+}
+.intro__text {
+   font-size: 1.8rem;
+   font-weight: var(--medium);
+   max-inline-size: 37.5rem;
+}
+
+/*
+///////////////////
+// RATINGS
+*/
+.ratings {
+   width: 100%;
+   margin-block: 4.8rem;
+}
+.rating__box {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   background-color: var(--light-grayish-Magenta);
+   padding: 1.5rem 2rem;
+   margin-block-end: 1.8rem;
+   border-radius: var(--radius);
+}
+.rating__icons {
+   display: flex;
+   gap: 0.75rem;
+
+   margin-block-end: calc(var(--spacer) / 3);
+}
+.rating__rater {
+   font-size: 1.8rem;
+}
+
+/*
+///////////////////
+// REVIEWS
+*/
+.review {
+   font-size: 1.5rem;
+   color: var(--light-grayish-Magenta);
+   background-color: var(--very-dark-magenta);
+   padding: 3.4rem 3.2rem;
+   margin-block-end: 1.6rem;
+   border-radius: var(--radius);
+}
+.review__img {
+   width: 4rem;
+   aspect-ratio: 1;
+   border-radius: 100vw;
+}
+.review__name {
+   font-size: inherit;
+   font-weight: var(--bold);
+   color: var(--light-grayish-Magenta);
+   line-height: var(--line-height-2);
+}
+.review__verified {
+   color: var(--soft-pink);
+   line-height: var(--line-height-2);
+}
+
+/*
+///////////////////
+// UTILITIES
+*/
+.centered {
+   text-align: center;
+}
+.col {
+   display: flex;
+   flex-direction: column;
+   gap: 2.6rem;
+}
+.row {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 2.4rem;
+}
+
+/*
+//////////////////////////
+/// MEDIA QUERY - TABLET 
+*/
+@media screen and (min-width: 525px) {
+   body {
+      padding-inline: clamp(2.5rem, 5vw, 5rem);
+   }
+
+   .review {
+      max-width: 50rem;
+   }
+}
+/*
+///////////////////////////
+/// MEDIA QUERY - DESKTOP 
+*/
+@media screen and (min-width: 920px) {
+   .wrapper {
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(2, minmax(30rem, auto));
+      align-items: center;
+      row-gap: var(--spacer);
+      /* border: 1px dashed gray; */
+   }
+
+   /* --- Intro ---*/
+   .intro {
+      grid-column: 1 / 4;
+      grid-row: 1 / 2;
+
+      align-items: start;
+      text-align: left;
+
+      margin-right: var(--spacer);
+   }
+   .intro__title {
+      font-size: 5.6rem;
+   }
+   .intro__text {
+      max-inline-size: 85%;
+   }
+
+   /* --- Ratings ---*/
+   .ratings {
+      grid-column: 4 / 7;
+      grid-row: 1/2;
+
+      display: flex;
+      flex-direction: column;
+
+      margin: unset;
+   }
+   .rating__box {
+      width: clamp(50%, 45vw, 44rem);
+
+      flex-direction: row;
+      justify-content: center;
+      gap: var(--spacer);
+   }
+   .rating__box:nth-child(1) {
+      align-self: flex-start;
+   }
+   .rating__box:nth-child(2) {
+      align-self: center;
+   }
+   .rating__box:nth-child(3) {
+      align-self: flex-end;
+   }
+   .rating__icons {
+      gap: clamp(0rem, 0.5vw, 3rem);
+
+      margin-block-end: unset;
+   }
+
+   /* --- Reviews ---*/
+   .reviews {
+      grid-row: 2 / 3;
+      grid-column: 1 / -1;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacer);
+   }
+   .review {
+      transform: translateY(calc(var(--idx) * (var(--spacer) / 2)));
+   }
+}
+
+.attribution {
+   font-size: 11px;
+   text-align: center;
+}
+.attribution a {
+   color: hsl(228, 45%, 44%);
+}
